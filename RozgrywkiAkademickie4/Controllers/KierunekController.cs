@@ -1,4 +1,5 @@
 ﻿using cloudscribe.Pagination.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using RozgrywkiAkademickie4.Models;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace RozgrywkiAkademickie4.Controllers
 {
+    [Authorize]
     public class KierunekController : Controller
     {
         private readonly IKierunekRepository _kierunekRepository;

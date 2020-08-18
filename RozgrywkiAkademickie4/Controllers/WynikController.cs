@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using cloudscribe.Pagination.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.Language;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -84,7 +85,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
             return View(result3);
         }
-
+        [Authorize]
         public IActionResult WybierzZawody(string searchString, int pageNumber = 1, int pageSize = 3)
         {
             int ExcludeRecords = (pageSize * pageNumber) - pageSize;
@@ -139,7 +140,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
             return View(result);
         }
-
+        [Authorize]
         public IActionResult WybierzKierunek(int? id, string searchString, int pageNumber = 1, int pageSize = 3)
         {
             int ExcludeRecords = (pageSize * pageNumber) - pageSize;
@@ -193,10 +194,12 @@ namespace RozgrywkiAkademickie4.Controllers
 
             
         }
+        [Authorize]
         public IActionResult Dodaj()
         {
             return View();
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Dodaj(int id, int id2, Wynik wynik)
@@ -254,13 +257,14 @@ namespace RozgrywkiAkademickie4.Controllers
 
         //    return View(edytowanyWynik);
         //}
-
+        [Authorize]
         public IActionResult Edytuj(int id)
         {
             Wynik wynik = _wynikRepository.PobierzWynikOId(id);
             ViewBag.IdZawodow = (int)wynik.Id;
             return View(wynik);
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edytuj(Wynik wynik)
@@ -286,7 +290,7 @@ namespace RozgrywkiAkademickie4.Controllers
             return View();
            // return RedirectToAction("Szczegoly", "Zawody", new { id = idZawodow });
         }
-
+        [Authorize]
         public IActionResult Usun(int id)
         {
             Wynik wynik = _wynikRepository.PobierzWynikOId(id);
@@ -296,7 +300,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
             return View(wynik);
         }
-
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Usun(Wynik wynik)

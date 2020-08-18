@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+@inject Microsoft.AspNetCore.Identity.SignInManager<IdentityUser> SignInManager
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,17 +27,48 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Kierunek" asp-action="Index">Kierunki</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Sport" asp-action="Index">Sporty</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Zawody" asp-action="Index">Zawody</a>
                         </li>
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Sport" asp-action="Index">Sporty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Kierunek" asp-action="Index">Kierunki</a>
+                            </li>
+
+                        }
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Wynik" asp-action="Index">Wyniki</a>
                         </li>
+
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+
+
+                            <li class="nav navbar-nav navbar-right">
+                                <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm" method="post" class="navbar-right">
+
+
+                                    <a style="color: black" href="javascript:document.getElementById('logoutForm').submit()">Wyloguj</a>
+                                </form>
+                            </li>
+
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Rejestracja</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Logowanie</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

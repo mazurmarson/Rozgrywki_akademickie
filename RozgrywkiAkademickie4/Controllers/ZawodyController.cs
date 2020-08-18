@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RozgrywkiAkademickie4.ViewsModel;
 using RozgrywkiAkademickie4.PomoKlas;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RozgrywkiAkademickie4.Controllers
 {
@@ -109,7 +110,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
 
 
-
+        [Authorize]
         public IActionResult Dodaj2(int id)
         {
 
@@ -118,7 +119,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
 
         }
-
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Dodaj2(int id, ZawodyViewModel model)
@@ -143,7 +144,7 @@ namespace RozgrywkiAkademickie4.Controllers
             }
             return View();
         }
-
+        [Authorize]
         private string UploadedFile(ZawodyViewModel model)
         {
             string uniqueFileName = null;
@@ -204,7 +205,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
         //     return View(zawody);
         // }
-
+        [Authorize]
         public IActionResult WybierzSport(string searchString, int pageNumber = 1, int pageSize = 3)
         {
 
@@ -317,7 +318,7 @@ namespace RozgrywkiAkademickie4.Controllers
             return View(multipletable);
         }
 
-
+        [Authorize]
         public IActionResult Usun(int id)
         {
             Zawody zawody = _zawodyRepository.PobierzZawodyOId(id);
@@ -325,6 +326,7 @@ namespace RozgrywkiAkademickie4.Controllers
 
             return View(zawody);
         }
+        [Authorize]
         [HttpPost]
         public IActionResult Usun(Zawody zawody)
         {

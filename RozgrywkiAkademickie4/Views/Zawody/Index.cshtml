@@ -1,6 +1,12 @@
 ﻿@model cloudscribe.Pagination.Models.PagedResult<Zawody>
+@using Microsoft.AspNetCore.Identity
+@inject Microsoft.AspNetCore.Identity.SignInManager<IdentityUser> SignInManager
 
-<li><a asp-controller="Zawody" asp-action="WybierzSport" class="navbar-brand">Dodaj</a></li>
+@if (SignInManager.IsSignedIn(User))
+{
+    <li><a asp-controller="Zawody" asp-action="WybierzSport" class="navbar-brand">Dodaj</a></li>
+}
+
 
 <form asp-controller="Zawody" asp-action="Index" method="get">
     <p>

@@ -178,9 +178,6 @@ C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debu
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
-C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.csproj.CoreCompileInputs.cache
-C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Wynik\Index.cshtml.g.cs
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Wynik\WybierzZawody.cshtml.g.cs
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Wynik\WybierzKierunek.cshtml.g.cs
@@ -192,3 +189,13 @@ C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debu
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Wynik\Usun.cshtml.g.cs
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Zawody\Usun.cshtml.g.cs
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Wynik\Wroc.cshtml.g.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.csproj.CoreCompileInputs.cache
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
