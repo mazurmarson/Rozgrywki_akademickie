@@ -1,0 +1,37 @@
+﻿@model IEnumerable<RozgrywkiAkademickie4.PomoKlas.Tabela>
+
+
+
+<table class="table" style="background-color:azure">
+    <thead>
+        <tr>
+            <th>Nazwa Kierunku</th>
+            <th>Rok</th>
+            <th>Punkty</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+
+            <td>@Html.DisplayFor(modelItem => item.Nazwa)</td>
+            <td>@Html.DisplayFor(modelItem => item.Rok)</td>
+            <td>@Html.DisplayFor(modelItem => item.Punkty)</td>
+            <td>@Html.DisplayFor(modelItem => item.CzyBonus)</td>
+            
+
+
+            <td>
+                @*<a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Szczegóły</a>
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Edytuj</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Usuń</a>*@
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>

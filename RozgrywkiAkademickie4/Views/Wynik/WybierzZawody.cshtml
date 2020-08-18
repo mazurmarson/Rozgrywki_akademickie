@@ -1,0 +1,57 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Zawody>
+@{
+    ViewData["Title"] = "WybierzZawody";
+}
+
+<h1>WybierzZawody</h1>
+
+<form asp-controller="Borrow" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Szukaj" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Sport
+            </th>
+            <th>
+                Data
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sport.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataZawodow)
+                </td>
+                <td>
+
+                    <a asp-action="WybierzKierunek" asp-route-id="@item.Id">Wybierz zawody</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<cs-pager cs-paging-pagenumber="(int)Model.PageNumber"
+          cs-paging-totalitems="(int)Model.TotalItems"
+          cs-paging-pagesize="Model.PageSize"
+          cs-pagenumber-param="pagenumber"
+          asp-controller="Wynik"
+          asp-action="WybierzZawody"
+          cs-pager-li-current-class="page-item active"
+          cs-pager-li-other-class="page-item"
+          cs-pager-li-non-active-class="page-item disabled"
+          cs-pager-link-current-class="page-link"
+          cs-pager-link-other-class="page-link"></cs-pager>
+

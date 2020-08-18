@@ -1,0 +1,39 @@
+﻿@model IEnumerable<RozgrywkiAkademickie4.PomoKlas.TabelaZawody>
+
+    <a asp-controller="Wynik" asp-action="WybierzKierunek" asp-route-id="@ViewBag.Id" class="btn btn-danger btn-sm" style="margin-bottom:3px">Dodaj</a>
+    <a asp-controller="Zawody" asp-action="Usun" asp-route-id="@ViewBag.Id" class="btn btn-danger btn-sm" style="margin-bottom:3px">Usun zawody</a>
+<table class="table" style="background-color:azure">
+    <thead>
+        <tr>
+            <th>Nazwa Kierunku</th>
+            <th>Rok</th>
+            <th>Punkty</th>
+            <th>Miejsce</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NazwaK)</td>
+                <td>@Html.DisplayFor(modelItem => item.Rok)</td>
+                <td>@Html.DisplayFor(modelItem => item.Punkty)</td>
+                <td>@Html.DisplayFor(modelItem => item.Miejsce)</td>
+
+                <td>
+                    @*<a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Szczegóły</a>
+        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Edytuj</a>
+        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Usuń</a>*@
+                    <a asp-controller="Wynik" asp-action="Edytuj" asp-route-id="@item.Id"  class="btn btn-success btn-sm" style="margin-bottom:3px">Edytuj</a>
+                    <a asp-controller="Wynik" asp-action="Usun" asp-route-id="@item.Id" asp-route-id2="@ViewBag.Id" class="btn btn-danger btn-sm" style="margin-bottom:3px">Usuń</a>
+
+
+
+
+
+</tr>
+        }
+    </tbody>
+</table>

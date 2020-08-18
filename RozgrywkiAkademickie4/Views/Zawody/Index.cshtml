@@ -1,0 +1,36 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Zawody>
+
+<li><a asp-controller="Zawody" asp-action="WybierzSport" class="navbar-brand">Dodaj</a></li>
+
+<form asp-controller="Zawody" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Szukaj" />
+    </p>
+</form>
+@foreach (var item in Model.Data)
+{
+    <div class="col-sm-10 col-lg-10 col-md-10">
+        <div class="thumbnail">
+
+            <div class="caption">
+                <a asp-controller="Zawody" asp-action="Szczegoly" asp-route-id="@item.Id"><h3 class="pull-right">@item.DataZawodow.ToShortDateString() - @item.Sport.Nazwa</h3></a>
+
+            </div>
+            <div class="col-md-10">
+                <img class="img-responsive" style="width: 30%" src="~/images/@item.ZdjecieUrl" alt="">
+            </div>
+        </div>
+    </div>
+}
+<cs-pager cs-paging-pagenumber="(int)Model.PageNumber"
+          cs-paging-totalitems="(int)Model.TotalItems"
+          cs-paging-pagesize="Model.PageSize"
+          cs-pagenumber-param="pagenumber"
+          asp-controller="Zawody"
+          asp-action="Index"
+          cs-pager-li-current-class="page-item active"
+          cs-pager-li-other-class="page-item"
+          cs-pager-li-non-active-class="page-item disabled"
+          cs-pager-link-current-class="page-link"
+          cs-pager-link-other-class="page-link"></cs-pager>

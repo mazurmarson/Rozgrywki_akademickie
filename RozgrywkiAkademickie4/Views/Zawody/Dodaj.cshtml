@@ -1,0 +1,42 @@
+﻿@model RozgrywkiAkademickie4.Models.Zawody
+@{
+    ViewData["Title"] = "Dodaj";
+}
+
+<h1>Dodaj</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Dodaj">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DataZawodow" class="control-label"></label>
+                <input asp-for="DataZawodow" class="form-control" />
+                <span asp-validation-for="DataZawodow" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data" asp-action="UploadFile">
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" />
+                <label class="control-label">Zdjecie zawodów</label><br />
+                <img src="@ViewBag.ImgPath" height="300" width="300" /><br />
+                <input type="file" name="file" style="margin-top:10px" />
+                <input type="hidden" asp-for="ZdjecieUrl" value="@ViewBag.ImgPath" />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Załaduj zdjęcie" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
