@@ -77,9 +77,22 @@ namespace RozgrywkiAkademickie4.Controllers
         public IActionResult Usun(Sport sport)
         {
 
-            _sportRepository.UsunSport(sport);
+            try
+            {
+                _sportRepository.UsunSport(sport);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            
+            catch (Exception ex)
+            {
+                if (ex.ToString().ToLower().Contains("statement conflicted with the reference constraint"))
+                {
+                    return Content("Sport który chcesz usunąć jest wykorzystywany przez jakieś zawody, by móc go usunąć musisz usunąć najpierw zawody");
+                }
+                return Content(ex.ToString());
+            }
+
         }
 
     }

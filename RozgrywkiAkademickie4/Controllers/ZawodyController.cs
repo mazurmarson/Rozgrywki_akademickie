@@ -330,10 +330,23 @@ namespace RozgrywkiAkademickie4.Controllers
         [HttpPost]
         public IActionResult Usun(Zawody zawody)
         {
-            
-            _zawodyRepository.UsunZawody(zawody);
+            try
+            {
+                _zawodyRepository.UsunZawody(zawody);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            
+            catch (Exception ex)
+            {
+                if (ex.ToString().ToLower().Contains("statement conflicted with the reference constraint"))
+                {
+                    return Content("Zawody, które chcesz usunąć zawierają wyniki, usuń wszystkie wyniki w zawodach by móc je usunąć");
+                }
+                return Content(ex.ToString());
+            }
+
+
         }
 
     }

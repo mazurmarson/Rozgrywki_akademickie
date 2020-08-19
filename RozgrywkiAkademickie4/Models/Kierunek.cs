@@ -14,7 +14,7 @@ namespace RozgrywkiAkademickie4.Models
         [Required(ErrorMessage = "Nazwa kierunku jest wymagana")]
         [StringLength(100, ErrorMessage = "Nazwa kierunku jest za długa")]
 
-        [RegularExpression(@"^[A-Z][a-z]([a-z]| ?)*",
+        [RegularExpression(@"^[A-ZzżźćńółęąśŻŹĆĄŚĘŁÓŃ][a-zzżźćńółęąśŻŹĆĄŚĘŁÓŃ]([a-zzżźćńółęąśŻŹĆĄŚĘŁÓŃ]| ?)*",
          ErrorMessage = "Nazwa kierunku musi zaczynać sie z wielkiej litery i nie może zawierać liczb.")]
         public string Nazwa { get; set; }
 

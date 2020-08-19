@@ -194,8 +194,15 @@ C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debu
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.csproj.CoreCompileInputs.cache
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\RozgrywkiAkademickie4.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
-C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\mazi2\source\repos\RozgrywkiAkademickie4\RozgrywkiAkademickie4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Favicons.cshtml.g.cs

@@ -6,6 +6,9 @@ using RozgrywkiAkademickie4.Models;
 using RozgrywkiAkademickie4.PomoKlas;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity.Validation;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -116,14 +119,26 @@ namespace RozgrywkiAkademickie4.Controllers
 
         public IActionResult Usun(int Id)
         {
-            var kierunek = _kierunekRepository.PobierzKierunekOId(Id);
+            try
+            {
+                var kierunek = _kierunekRepository.PobierzKierunekOId(Id);
 
-            if (kierunek == null)
-                return NotFound();
+                if (kierunek == null)
+                    return NotFound();
 
-            _kierunekRepository.UsunKierunek(kierunek);
+                _kierunekRepository.UsunKierunek(kierunek);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                if (ex.ToString().ToLower().Contains("statement conflicted with the reference constraint"))
+                {
+                    return Content("Kierunek który chcesz usunąć jest wykorzystywany przez jakiś wynik, usuń wynik by móc usunąć kierunek");
+                }
+                return Content(ex.ToString());
+            }
+
         }
 
 

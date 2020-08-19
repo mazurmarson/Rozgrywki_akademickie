@@ -315,13 +315,23 @@ namespace RozgrywkiAkademickie4.Controllers
             //                 select z.Id).FirstOrDefault());
 
             //Wynik wynik2 = _wynikRepository.PobierzWynikOId(wynik.Id);
+            try
+            {
+                _wynikRepository.UsunWynik(wynik);
+
+                return RedirectToAction("Index", "Zawody");
+            }
+            catch (Exception ex)
+            {
+                if (ex.ToString().ToLower().Contains("statement conflicted with the reference constraint"))
+                {
+                    return Content("Zawody, które chcesz usunąć zawierają wyniki, usuń wszystkie wyniki w zawodach by móc je usunąć");
+                }
+                return Content(ex.ToString());
+            }
 
 
 
-
-              _wynikRepository.UsunWynik(wynik);
-
-            return RedirectToAction("Index", "Zawody");
         }
 
         public IActionResult Wroc()

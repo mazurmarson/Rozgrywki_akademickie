@@ -7,7 +7,7 @@
 
 <form asp-controller="Zawody" asp-action="WybierzSport" method="get">
     <p>
-        Title: <input type="text" name="SearchString">
+        Nazwa: <input type="text" name="SearchString">
         <input type="submit" value="Szukaj" />
     </p>
 </form>
@@ -16,10 +16,10 @@
     <thead>
         <tr>
             <th>
-                Imie
+                Sport
             </th>
             <th>
-                Nazwisko
+                Wybierz
             </th>
             <th></th>
         </tr>
@@ -36,7 +36,7 @@
                 <td>
 
                     
-                    <a asp-action="Dodaj2" asp-route-id="@item.Id" >WybierzSport</a>
+                    <a asp-action="Dodaj2" asp-route-id="@item.Id" >Wybierz Sport</a>
                 </td>
             </tr>
         }
